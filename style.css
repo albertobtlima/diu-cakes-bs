@@ -103,6 +103,25 @@ ul li a.btn:hover {
   color: #800080 !important;
 }
 
+/* Saiba mais */
+
+.saiba-mais-botao {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background-color: #f8f9fa;
+  color: #800080;
+  border: 1px solid #800080;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.saiba-mais-botao:hover {
+  background-color: #800080;
+  color: white;
+}
+
 /* ul li a.btn {
   color: #000;
   background-color: var(--marrom-claro);
