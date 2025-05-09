@@ -121,20 +121,3 @@ ul li a.btn:hover {
   background-color: #800080;
   color: white;
 }
-
-/* ul li a.btn {
-  color: #000;
-  background-color: var(--marrom-claro);
-  border: 1px solid #ccc;
-  transition: all 0.3s ease;
-  text-align: left;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-}
-
-ul li a.btn:hover {
-  color: #800080 !important;
-  background-color: #f4ebf7;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-} */
