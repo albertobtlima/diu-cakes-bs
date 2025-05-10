@@ -121,3 +121,46 @@ ul li a.btn:hover {
   background-color: #800080;
   color: white;
 }
+
+/* Botão hamburger */
+
+.custom-toggler {
+  border: none;
+  padding: 0.25rem;
+  position: relative;
+  z-index: 1031;
+}
+
+.toggler-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Estilo quando o botão está ativo (menu aberto) */
+.custom-toggler.collapsed .top-bar {
+  transform: rotate(0deg) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg) translateY(9px);
+}
+
+.custom-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.custom-toggler:not(.collapsed) .middle-bar {
+  opacity: 0;
+}
+
+.custom-toggler.collapsed .bottom-bar {
+  transform: rotate(0deg) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg) translateY(-9px);
+}
