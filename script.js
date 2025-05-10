@@ -34,3 +34,22 @@ document.querySelectorAll("[data-include]").forEach(async (el) => {
     }
   }
 });
+
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+
+  if (hash) {
+    // Espera o carregamento dos includes
+    const scrollToHash = () => {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Tenta de novo em 100ms se ainda não existir
+        setTimeout(scrollToHash, 100);
+      }
+    };
+
+    scrollToHash();
+  }
+});
