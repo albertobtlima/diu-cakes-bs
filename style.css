@@ -2,8 +2,8 @@
 :root {
   --bege: #e6e0d6;
   --marrom-escuro: #816d4f;
-  /* --marrom-claro: #e5dbd0; */
   --marrom-claro: rgb(226, 199, 171);
+  --roxo-escuro: #800080;
   --font-titulo: "Great Vibes", cursive;
 }
 
@@ -32,6 +32,12 @@ body {
   color: #000000 !important;
 }
 
+.nav-link:hover {
+  color: var(--roxo-escuro) !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .navbar-brand img {
   height: 60px;
   width: auto;
@@ -39,18 +45,7 @@ body {
 
 .font-titulo {
   font-family: var(--font-titulo);
-  color: #800080;
-}
-
-/* Offcanvas */
-
-.offcanvas-body .nav-link {
-  transition: color 0.3s;
-}
-
-.offcanvas-body .nav-link:hover {
-  color: #800080 !important;
-  text-decoration: underline;
+  color: var(--roxo-escuro);
 }
 
 .navbar-toggler:focus {
@@ -75,7 +70,7 @@ body {
 }
 
 .precos {
-  color: #800080;
+  color: var(--roxo-escuro);
 }
 
 /* Footer */
@@ -89,7 +84,7 @@ footer a {
 }
 
 section a i:hover {
-  color: #800080;
+  color: var(--roxo-escuro);
 }
 
 /* Contato */
@@ -100,7 +95,7 @@ ul li a.btn {
 }
 
 ul li a.btn:hover {
-  color: #800080 !important;
+  color: var(--roxo-escuro) !important;
 }
 
 /* Saiba mais */
@@ -109,8 +104,8 @@ ul li a.btn:hover {
   display: inline-block;
   padding: 0.3rem 0.75rem;
   background-color: #f8f9fa;
-  color: #800080;
-  border: 1px solid #800080;
+  color: var(--roxo-escuro);
+  border: 1px solid var(--roxo-escuro);
   border-radius: 0.25rem;
   font-weight: bold;
   text-align: center;
@@ -118,7 +113,7 @@ ul li a.btn:hover {
 }
 
 .saiba-mais-botao:hover {
-  background-color: #800080;
+  background-color: var(--roxo-escuro);
   color: white;
 }
 
@@ -140,7 +135,6 @@ ul li a.btn:hover {
   transition: all 0.3s ease;
 }
 
-/* Estilo quando o botão está ativo (menu aberto) */
 .custom-toggler.collapsed .top-bar {
   transform: rotate(0deg) translateY(0);
 }

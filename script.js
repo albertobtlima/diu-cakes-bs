@@ -1,3 +1,13 @@
+function isHomePage() {
+  const pathname = window.location.pathname.toLowerCase();
+  return (
+    pathname === "/" ||
+    pathname.endsWith("index.html") ||
+    pathname.includes("/home") ||
+    pathname.includes("/inicio")
+  );
+}
+
 document.querySelectorAll("[data-include]").forEach(async (el) => {
   const file = el.getAttribute("data-include");
   const res = await fetch(file);
@@ -13,29 +23,14 @@ document.querySelectorAll("[data-include]").forEach(async (el) => {
     });
   });
 
-  // Offcanvas + rolagem
-  const offcanvasElement = document.getElementById("offcanvasNavbar");
-  if (offcanvasElement) {
-    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
-    const toggler = document.querySelector(".navbar-toggler");
-
-    offcanvasElement
-      .querySelectorAll('.offcanvas-body .nav-link[href^="#"]')
-      .forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // evita comportamento padrão do hash
-          const targetId = link.getAttribute("href").slice(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            offcanvas.hide();
-            toggler?.blur(); // remove foco do botão
-
-            // Rola até a seção suavemente
-            setTimeout(() => {
-              targetElement.scrollIntoView({ behavior: "smooth" });
-            }, 300); // espera o offcanvas fechar
-          }
-        });
-      });
+  // <h1> Na home
+  if (isHomePage()) {
+    const logo = el.querySelector("#site-logo");
+    if (logo && !logo.closest("h1")) {
+      const h1 = document.createElement("h1");
+      h1.className = "mb-0";
+      logo.parentNode.insertBefore(h1, logo);
+      h1.appendChild(logo);
+    }
   }
 });
