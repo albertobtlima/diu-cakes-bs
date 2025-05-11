@@ -12,7 +12,6 @@
 body {
   font-family: "Barlow", sans-serif;
   color: #000000;
-  /* background-color: rgba(128, 0, 128, 0.04); */
   background: linear-gradient(
     to right,
     rgba(128, 0, 128, 0.09),
