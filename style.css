@@ -25,6 +25,10 @@ body {
   background-color: var(--marrom-claro) !important;
 }
 
+.nav-item .nav-link {
+  transition: 0.3s ease;
+}
+
 .navbar-color .nav-link,
 .navbar-color .navbar-brand,
 .navbar-color .offcanvas-title {
@@ -33,8 +37,8 @@ body {
 
 .nav-link:hover {
   color: var(--roxo-escuro) !important;
-  text-decoration: underline;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .navbar-brand img {
