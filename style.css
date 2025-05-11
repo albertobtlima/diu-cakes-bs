@@ -167,3 +167,9 @@ ul li a.btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+@media (min-width: 992px) {
+  .texto-grande-desktop {
+    font-size: 1.25rem; /* ou maior, ex: 1.5rem */
+  }
+}
